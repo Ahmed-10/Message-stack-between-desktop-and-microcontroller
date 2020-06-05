@@ -16,7 +16,8 @@ void UART_Init(uint16_t ubrr){
 		/*enable receiver and transimter*/
 		UCSRB = (1 << RXEN) | (1 << TXEN);
 		/*set frame format: 8 bit - no parity - one stop bits*/
-		UCSRC |= (1<<USBS)|(3<<UCSZ0);
+		/*UCSRC |= (1<<USBS)|(3<<UCSZ0);*/
+		UCSRC |= (3<<UCSZ0);
 }
 
 void UART_disable_tx(void){

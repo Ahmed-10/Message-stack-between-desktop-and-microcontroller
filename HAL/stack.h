@@ -12,7 +12,7 @@
 #include "avr/io.h"
 
 #define StackEntry	uint8_t
-#define MAXSTACK	3
+#define MAXSTACK	2
 typedef struct stack{
 	uint8_t top;
 	StackEntry entry[MAXSTACK];

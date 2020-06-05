@@ -22,7 +22,10 @@ int main(void)
 	uint8_t ch;
 	CreateStack(&s);
 	lcd_init();
+	lcd_write_string((uint8_t*)"hello");
+	_delay_ms(1000);
 	UART_Init(MYUBRR);
+	UART_NoInterrupt_transmit(48);
 	StrReceive_Asynch();
     while(1)
     {
